@@ -19,6 +19,10 @@ public class Oblig1 {
         maks(a);
         System.out.println("Arrayet etter maksmetoden har kjørt: " + Arrays.toString(a));
 
+        // Kjører metoden ombyttinger
+        ombyttinger(a);
+
+
     }
 
     /**
@@ -91,11 +95,29 @@ public class Oblig1 {
 
     public static int ombyttinger(int a[] )
     {
+        if (a.length == 0)
+        {
+            throw new NoSuchElementException("Arrayet er tomt");
+        }
+
         int antallOmbyttinger = 0;
+        int temp;
 
-
-
+        for (int i = 0; i < a.length - 1; i++)
+        {
+            if (a[i] > a[i + 1])
+            {
+                temp = a[i + 1];
+                a[i + 1] = a[i];
+                a[i] = temp;
+                antallOmbyttinger++;
+                System.out.println("Loops etter maksmetoden har kjørt: " + antallOmbyttinger);
+            }
+        }return antallOmbyttinger;
     }
+
+    // Oppgave 2
+    
 
 
 
