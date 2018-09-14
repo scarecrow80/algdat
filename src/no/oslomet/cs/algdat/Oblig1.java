@@ -22,6 +22,10 @@ public class Oblig1 {
         // Kjører metoden ombyttinger
         ombyttinger(a);
 
+        // Kjører antallUlikeSortert
+        antallUlikeUsortert(a);
+
+
 
     }
 
@@ -117,7 +121,51 @@ public class Oblig1 {
     }
 
     // Oppgave 2
-    
+    public static int antallUlikeSortert(int[] a)
+    {
+        if (a.length == 0)
+        {
+            return 0;
+        }
+
+        for (int i = 0; i < a.length -1; i++)
+        {
+            if (a[i] > a[i + 1]) throw new IllegalStateException("Arrayet er ikke sortert!");
+        }
+
+        int antall = 1;
+        int temp = a[0];
+
+        for (int i = 1; i < a.length; i++)
+        {
+            if (a[i] != temp)
+            {
+                temp = a[i];
+                antall++;
+            }
+        }return antall;
+    }
+
+    // Oppgave 3
+    public static int antallUlikeUsortert(int[] a)
+    {
+        if (a.length == 0)
+        {
+            return 0;
+        }
+
+        int antall = 1;
+        int temp = a[0];
+
+        for (int i = 1; i < a.length; i++)
+        {
+            if (a[i] != temp)
+            {
+                temp = a[i];
+                antall++;
+            }
+        }return antall;
+    }
 
 
 
