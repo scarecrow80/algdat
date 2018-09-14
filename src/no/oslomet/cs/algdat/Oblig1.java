@@ -155,21 +155,22 @@ public class Oblig1 {
         }
 
         int antall = 1;
-        int temp = a[0];
 
         for (int i = 1; i < a.length; i++)
         {
-            if (a[i] != temp)
+            for (int j = i - 1; j >= 0; j--)
             {
-                temp = a[i];
-                antall++;
+                if (a[i] == a[j])
+                {
+                    break;
+                }
+                if (j == 0)
+                {
+                    antall++;
+                }
             }
         }return antall;
     }
-
-
-
-
 
 }
 
