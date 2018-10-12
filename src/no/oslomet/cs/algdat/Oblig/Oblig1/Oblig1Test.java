@@ -1,4 +1,4 @@
-package no.oslomet.cs.algdat;
+package Oblig1;
 
 ////// Testprogram for Oblig 1 - 2018 ////////////////////////
 

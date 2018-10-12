@@ -1,4 +1,4 @@
-package no.oslomet.cs.algdat;
+package Oblig1;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
